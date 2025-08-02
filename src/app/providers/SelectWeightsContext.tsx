@@ -53,7 +53,7 @@ export function SelectWeightsProvider({
 
   const handleInputChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      let value = e.target.value;
+      const value = e.target.value;
 
       // Allow only numbers and decimals
       if (!/^\d*\.?\d*$/.test(value)) return;
@@ -91,7 +91,7 @@ export function SelectWeightsProvider({
     }
 
     return getWeights(selection, parseFloat(input));
-  }, [selection, input, isBarbell]);
+  }, [selection, input, isBarbell, getWeights]);
 
   return (
     <SelectWeightsContext.Provider

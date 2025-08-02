@@ -16,7 +16,7 @@ export default function OutputDisplay() {
     }
 
     return weightsNeeded.amount;
-  }, [weightsNeeded]);
+  }, [weightsNeeded, isBarbell]);
 
   return (
     <div className="p-6 rounded-xl bg-white shadow-md border space-y-4">

@@ -1,4 +1,3 @@
-import { Weight, weights } from "../data/trueFitness";
 import WeightToggles from "./WeightToggles";
 import InputField from "./InputField";
 import OutputDisplay from "./OutputDisplay";
@@ -11,9 +10,9 @@ export default function TrueFitnessPage() {
       <InputField />
       <OutputDisplay />
       <p className="mt-4 text-sm opacity-50">
-        This tool was created because TrueFitness Gym's rack area somehow
-        provides mostly kg weights and some lb weights. It's a pain to calculate
-        the weights I need by mixing the kg and lb weights...
+        This tool was created because TrueFitness Gym&apos;s rack area somehow
+        provides mostly kg weights and some lb weights. It&apos;s a pain to
+        calculate the weights I need by mixing the kg and lb weights...
       </p>
     </div>
   );
