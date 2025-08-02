@@ -45,8 +45,8 @@ export function SelectWeightsProvider({
 
   const handleToggleNumber = useCallback((weight: Weight) => {
     setSelection((prev) =>
-      prev.includes(weight)
-        ? prev.filter((n) => n !== weight)
+      prev.map((p) => p.value).includes(weight.value)
+        ? prev.filter((n) => n.value !== weight.value)
         : [...prev, weight],
     );
   }, []);
@@ -74,13 +74,6 @@ export function SelectWeightsProvider({
     setIsBarbell((prev) => !prev);
   }, []);
 
-  const getWeights = (weights: Weight[], target: number) => {
-    if (isBarbell) {
-      target = Math.max(0, (target - 44) / 2);
-    }
-    return computeWeightsNeeded(weights, target);
-  };
-
   const weightsNeeded = useMemo(() => {
     if (Number.isNaN(input) || input === "") {
       return {
@@ -89,9 +82,12 @@ export function SelectWeightsProvider({
         amount: 0,
       };
     }
-
-    return getWeights(selection, parseFloat(input));
-  }, [selection, input, isBarbell, getWeights]);
+    let target = parseFloat(input);
+    if (isBarbell) {
+      target = Math.max(0, (target - 44) / 2);
+    }
+    return computeWeightsNeeded(selection, target);
+  }, [selection, input, isBarbell]);
 
   return (
     <SelectWeightsContext.Provider

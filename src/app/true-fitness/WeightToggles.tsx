@@ -8,7 +8,7 @@ export default function WeightToggles() {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 mb-6">
       {weights.map((weight) => {
-        const selected = selection.includes(weight);
+        const selected = selection.map((s) => s.value).includes(weight.value);
         return (
           <button
             key={weight.value}
