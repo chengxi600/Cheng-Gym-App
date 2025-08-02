@@ -28,7 +28,7 @@ export default function OutputDisplay() {
       </div>
       <div>
         <h2 className="text-lg font-semibold text-gray-800 mb-1">
-          Selected Weights
+          Plates Needed
         </h2>
         {weightsNeeded.weights.length > 0 ? (
           <ul className="list-disc list-inside space-y-1 text-gray-700">

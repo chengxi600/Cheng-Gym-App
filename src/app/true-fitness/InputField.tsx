@@ -13,7 +13,7 @@ export default function WeightInputFields() {
         value={input}
         step={0.5}
         onChange={handleInputChange}
-        placeholder="Enter something..."
+        placeholder="Enter weight (lbs)..."
         className="w-full p-2 border border-gray-300 rounded mb-4"
       />
       <div className="mb-4">
@@ -24,7 +24,12 @@ export default function WeightInputFields() {
             onChange={handleToggleBarbell}
             className="w-4 h-4"
           />
-          <span>Barbell</span>
+          <span className="flex flex-row gap-3 items-center">
+            Barbell{" "}
+            <p className="opacity-50 text-xs">
+              This will exclude 44lbs bar when calculating plates.
+            </p>
+          </span>
         </label>
       </div>
     </div>

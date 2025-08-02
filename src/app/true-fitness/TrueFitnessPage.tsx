@@ -5,7 +5,7 @@ import OutputDisplay from "./OutputDisplay";
 export default function TrueFitnessPage() {
   return (
     <div className="max-w-xl mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-4">Number Grid Toggle</h1>
+      <h1 className="text-2xl font-bold mb-4">Weight Selection</h1>
       <WeightToggles />
       <InputField />
       <OutputDisplay />
