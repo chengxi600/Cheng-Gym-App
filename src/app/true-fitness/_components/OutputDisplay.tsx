@@ -1,7 +1,7 @@
 "use client";
 
+import { useSelectWeights } from "@/providers/SelectWeightsContext";
 import { useMemo } from "react";
-import { useSelectWeights } from "../providers/SelectWeightsContext";
 
 export default function OutputDisplay() {
   const { weightsNeeded, isBarbell } = useSelectWeights();

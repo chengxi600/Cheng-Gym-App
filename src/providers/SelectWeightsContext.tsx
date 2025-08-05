@@ -9,7 +9,7 @@ import React, {
   ReactNode,
 } from "react";
 import { Weight } from "../data/trueFitness";
-import { computeWeightsNeeded } from "@/app/util";
+import { computeWeightsNeeded } from "../utils/util";
 
 interface WeightsNeededResult {
   error: boolean;

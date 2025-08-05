@@ -1,6 +1,6 @@
-import { Weight, weights } from "../data/trueFitness";
-import { SelectWeightsProvider } from "../providers/SelectWeightsContext";
-import TrueFitnessPage from "./TrueFitnessPage";
+import { Weight, weights } from "../../data/trueFitness";
+import { SelectWeightsProvider } from "../../providers/SelectWeightsContext";
+import TrueFitnessPage from "./_components/TrueFitnessPage";
 
 export default function TrueFitness() {
   //filter out 25kg by default

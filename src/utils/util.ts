@@ -1,4 +1,4 @@
-import { Weight } from "./data/trueFitness";
+import { Weight } from "../data/trueFitness";
 
 type WeightNeeded = {
   error: boolean;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useSelectWeights } from "../providers/SelectWeightsContext";
+import { useSelectWeights } from "@/providers/SelectWeightsContext";
 
 export default function WeightInputFields() {
   const { input, isBarbell, handleInputChange, handleToggleBarbell } =

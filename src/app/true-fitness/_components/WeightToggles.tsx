@@ -1,6 +1,7 @@
 "use client";
-import { useSelectWeights } from "../providers/SelectWeightsContext";
-import { weights } from "../data/trueFitness";
+
+import { weights } from "@/data/trueFitness";
+import { useSelectWeights } from "@/providers/SelectWeightsContext";
 
 export default function WeightToggles() {
   const { selection, handleToggleNumber } = useSelectWeights();
